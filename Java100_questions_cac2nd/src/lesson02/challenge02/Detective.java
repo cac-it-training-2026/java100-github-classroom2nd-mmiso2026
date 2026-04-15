@@ -24,9 +24,11 @@ public class Detective {
 		System.out.println("探偵：");
 		System.out.println("助手君スケジュールはどうなってるかね？\n");
 
+		//true = 正しい / OK / ON、false = 間違い / NG / OFF
+		//ここでは、true予定あり、false予定なし
 		boolean appointment = false;
 
-		if (appointment) {
+		if (!appointment) {
 			System.out.println("助手：");
 			System.out.println("いつも空いています。");
 		}
