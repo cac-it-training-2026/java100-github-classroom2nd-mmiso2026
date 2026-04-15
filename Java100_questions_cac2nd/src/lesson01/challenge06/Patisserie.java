@@ -49,30 +49,30 @@ public class Patisserie {
 
 		System.out.print("シトロン      >");
 		String citbuyString = reader.readLine();
-		int citbuystr = Integer.parseInt(citbuyString);
+		int citbuy = Integer.parseInt(citbuyString);
 
 		System.out.print("ショコラ      >");
 		String chocobuyString = reader.readLine();
-		int chocobuystr = Integer.parseInt(chocobuyString);
+		int chocobuy = Integer.parseInt(chocobuyString);
 
 		System.out.print("ピスターシュ  >");
 		String pisbuyString = reader.readLine();
-		int pisbuystr = Integer.parseInt(pisbuyString);
+		int pisbuy = Integer.parseInt(pisbuyString);
 
-		System.out.println("\nシトロン     " + citbuystr + "個");
-		System.out.println("ショコラ     " + chocobuystr + "個");
-		System.out.println("ピスターシュ  " + pisbuystr + "個");
+		System.out.println("\nシトロン     " + citbuy + "個");
+		System.out.println("ショコラ     " + chocobuy + "個");
+		System.out.println("ピスターシュ  " + pisbuy + "個");
 
 		//回答ではintでカッコ内の計算していたけどいいのか？
-		System.out.println("\n合計個数   " + (citbuystr + chocobuystr + pisbuystr) + "個");
-		System.out.println("合計金額   " + (250 * citbuystr + 280 * chocobuystr + 320 * pisbuystr) + "円");
+		System.out.println("\n合計個数   " + (citbuy + chocobuy + pisbuy) + "個");
+		System.out.println("合計金額   " + (250 * citbuy + 280 * chocobuy + 320 * pisbuy) + "円");
 
 		System.out.println("\nをお買い上げですね。");
 		System.out.println("承りました。");
 
-		citostock = citostock - citbuystr;
-		chocostock = chocostock - chocobuystr;
-		pisstock = pisstock - pisbuystr;
+		citostock = citostock - citbuy;
+		chocostock = chocostock - chocobuy;
+		pisstock = pisstock - pisbuy;
 
 		System.out.println("\n本日のおすすめ商品です。\n");
 
