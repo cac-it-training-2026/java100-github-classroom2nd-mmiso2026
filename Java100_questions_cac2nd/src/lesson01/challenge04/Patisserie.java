@@ -28,6 +28,52 @@
 
 package lesson01.challenge04;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
+
+	public static void main(String[] args) throws IOException {
+		System.out.println("たいへんお待たせしました。");
+		System.out.println("【ポエール・ネルメ】");
+		System.out.println("ただいまより開店です！！");
+
+		int citostock = 30;
+		int chocostock = 30;
+		int pisstock = 30;
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+
+		System.out.println("シトロン     \\250・・・残り" + citostock + "個");
+		System.out.println("ショコラ     \\280・・・残り" + chocostock + "個");
+		System.out.println("ピスターシュ  \\320・・・残り" + pisstock + "個");
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("\nそれぞれ何個づつ買いますか？（最大30個まで）\n");
+
+		System.out.print("シトロン      >");
+		String citbuyString = reader.readLine();
+		//↑string型だから、入力されたものは文字列として認識
+		// 入力した文字列を数値に変換 
+		int citbuystr = Integer.parseInt(citbuyString);
+
+		System.out.print("ショコラ      >");
+		String chocobuyString = reader.readLine();
+		int chocobuystr = Integer.parseInt(chocobuyString);
+
+		System.out.print("ピスターシュ   >");
+		String pisbuyString = reader.readLine();
+		int pisbuystr = Integer.parseInt(pisbuyString);
+
+		System.out.println("\nシトロン     " + citbuystr + "個");
+		System.out.println("ショコラ     " + chocobuystr + "個");
+		System.out.println("ピスターシュ  " + pisbuystr + "個");
+
+		System.out.println("\nをお買いあげですね。");
+		System.out.println("承りました。");
+
+	}
 
 }

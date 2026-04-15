@@ -21,6 +21,63 @@
 
 package lesson01.challenge06;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
 
+	public static void main(String[] args) throws IOException {
+
+		System.out.println("たいへんお待たせしました。");
+		System.out.println("【ポエール・ネルメ】");
+		System.out.println("ただいまより開店です！！");
+
+		int citostock = 30;
+		int chocostock = 30;
+		int pisstock = 30;
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+
+		System.out.println("シトロン     \\250・・・残り" + citostock + "個");
+		System.out.println("ショコラ     \\280・・・残り" + chocostock + "個");
+		System.out.println("ピスターシュ \\320・・・残り" + pisstock + "個");
+
+		System.out.println("\nそれぞれ何個づつ買いますか？（最大30個まで)\n");
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.print("シトロン      >");
+		String citbuyString = reader.readLine();
+		int citbuystr = Integer.parseInt(citbuyString);
+
+		System.out.print("ショコラ      >");
+		String chocobuyString = reader.readLine();
+		int chocobuystr = Integer.parseInt(chocobuyString);
+
+		System.out.print("ピスターシュ  >");
+		String pisbuyString = reader.readLine();
+		int pisbuystr = Integer.parseInt(pisbuyString);
+
+		System.out.println("\nシトロン     " + citbuystr + "個");
+		System.out.println("ショコラ     " + chocobuystr + "個");
+		System.out.println("ピスターシュ  " + pisbuystr + "個");
+
+		//回答ではintでカッコ内の計算していたけどいいのか？
+		System.out.println("\n合計個数   " + (citbuystr + chocobuystr + pisbuystr) + "個");
+		System.out.println("合計金額   " + (250 * citbuystr + 280 * chocobuystr + 320 * pisbuystr) + "円");
+
+		System.out.println("\nをお買い上げですね。");
+		System.out.println("承りました。");
+
+		citostock = citostock - citbuystr;
+		chocostock = chocostock - chocobuystr;
+		pisstock = pisstock - pisbuystr;
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+
+		System.out.println("シトロン     \\250・・・残り" + citostock + "個");
+		System.out.println("ショコラ     \\280・・・残り" + chocostock + "個");
+		System.out.println("ピスターシュ  \\320・・・残り" + pisstock + "個");
+	}
 }
